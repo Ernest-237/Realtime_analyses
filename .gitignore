@@ -1,0 +1,35 @@
+# Environnements virtuels
+venv/
+env/
+
+# Fichiers de configuration locaux
+*.env
+*.env.*
+
+# Cache Python
+__pycache__/
+*.py[cod]
+
+# Fichiers de log
+*.log
+
+# Fichiers de base de données locales
+*.sqlite3
+*.db
+
+# Fichiers de compilation ou bytecode Python
+*.pyc
+
+# Fichiers générés automatiquement
+instance/
+.mypy_cache/
+pytest_cache/
+htmlcov/
+
+# Dossiers et fichiers spécifiques à l'IDE
+.vscode/
+.idea/
+
+# Autres fichiers lourds ou générés
+*.DS_Store
+*.egg-info/
