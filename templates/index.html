@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse Musicale</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analyse des Fichiers Audio</h1>
+        <form id="audio-form">
+            <input type="file" id="audio-upload" class="file-input" accept=".wav, .mp3">
+            <button type="button" id="analyze-btn" class="btn-analyze">Analyser le fichier</button>
+            <button type="button" id="realtime-btn" class="btn-realtime">Analyse en temps réel</button>
+        </form>
+        <div id="file-info" class="file-info hidden">
+            <p id="file-name"></p>
+            <span id="info-bubble" class="info-bubble hidden">Format: WAV, MP3 | Max 10 Mo</span>
+        </div>
+        <div id="loader" class="loader hidden"></div>
+        <div id="results" class="results hidden">
+            <h2>Résultat de l'analyse :</h2>
+            <p id="analysis-result"></p>
+        </div>
+    </div>
+
+    <div id="error-popup" class="error-popup hidden">
+        <p>Une erreur s'est produite lors de l'analyse du fichier.</p>
+        <button id="close-popup">Fermer</button>
+    </div>
+
+     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
