@@ -1,4 +1,5 @@
 Flask
 librosa
+pyaudio
 sounddevice
 gunicorn
